@@ -1,0 +1,69 @@
+/* ============================================================
+   05. SOBRE NOSOTROS / FILOSOFÍA
+   ============================================================ */
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-visual {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    box-shadow: var(--shadow-lift);
+}
+
+.sobre-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(200deg, rgba(76,29,149,0.35), transparent 55%);
+}
+
+.sobre-texto h2 {
+    font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    margin-bottom: 18px;
+    font-size: 1.02rem;
+}
+
+.sobre-pilares-mini {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.mini-pilar {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border-bottom: 3px solid var(--gold);
+}
+
+.mini-pilar strong {
+    display: block;
+    font-family: var(--font-display);
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.mini-pilar span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}

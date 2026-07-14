@@ -1,0 +1,47 @@
+/* ============================================================
+   12. FRASE MOTIVACIONAL
+   ============================================================ */
+
+.frase-motivacional {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    text-align: center;
+    padding: 70px 20px;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.frase-motivacional::before {
+    content: '"';
+    font-family: var(--font-display);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12rem;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+}
+
+.frase-content {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    max-width: 900px;
+    margin: auto;
+    font-style: italic;
+    line-height: 1.4;
+    position: relative;
+}
+
+.frase-content span {
+    display: block;
+    margin-top: 14px;
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+}

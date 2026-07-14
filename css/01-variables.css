@@ -1,0 +1,39 @@
+/* ============================================================
+   01. VARIABLES — Sistema de diseño Body & Mind Training
+   Todo el color, tipografía y espaciado del sitio nace de aquí.
+   ============================================================ */
+
+:root {
+    /* --- Paleta: violeta profundo (cuerpo/fuerza) + dorado suave (mente/calma) --- */
+    --primary: #4c1d95;
+    --primary-light: #7c3aed;
+    --primary-dark: #2e1065;
+    --accent: #a78bfa;
+    --gold: #d4a94e;
+    --gold-light: #f0dba8;
+
+    --bg-light: #f8f6ff;
+    --bg-alt: #f1ecff;
+    --white: #ffffff;
+
+    --text-dark: #241c3d;
+    --text-body: #443a5e;
+    --text-muted: #6b6280;
+
+    /* --- Tipografía --- */
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+    /* --- Espaciado y forma --- */
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --section-padding: 110px 5%;
+
+    /* --- Sombras --- */
+    --shadow-soft: 0 10px 30px rgba(76, 29, 149, 0.06);
+    --shadow-lift: 0 18px 45px rgba(76, 29, 149, 0.12);
+
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

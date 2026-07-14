@@ -1,0 +1,68 @@
+/* ============================================================
+   15. RESPONSIVE — Se carga al final para sobrescribir con prioridad
+   ============================================================ */
+
+@media (max-width: 968px) {
+    .pilar-card,
+    .pilar-card:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    .pilar-card:nth-child(even) .pilar-info {
+        order: 0;
+    }
+    .pilar-media {
+        height: 460px;
+        min-height: 0;
+    }
+    .sobre-container {
+        grid-template-columns: 1fr;
+    }
+    .sobre-visual {
+        aspect-ratio: 16 / 9;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary-dark);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+    .nav-links.abierto {
+        max-height: 300px;
+    }
+    .nav-links li {
+        width: 100%;
+    }
+    .nav-links a {
+        display: block;
+        padding: 16px 24px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    section {
+        padding: 70px 20px;
+    }
+    .contacto-box,
+    .whatsapp-box {
+        padding: 32px 22px;
+    }
+    .hero-stats {
+        gap: 28px;
+    }
+    .sobre-pilares-mini {
+        grid-template-columns: 1fr;
+    }
+}

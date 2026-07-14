@@ -1,0 +1,223 @@
+/* ============================================================
+   13. CONTACTO — Formulario, pantalla de éxito y QR de WhatsApp
+   ============================================================ */
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contacto-box {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    box-shadow: var(--shadow-soft);
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* --- Formulario --- */
+#formulario-contacto.oculto {
+    display: none;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 2px solid #e9d5ff;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: var(--transition);
+    background-color: #fdfbff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    background-color: var(--white);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    background: var(--primary-light);
+    color: var(--white);
+    border: none;
+    padding: 16px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    width: 100%;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(124, 58, 237, 0.3);
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-error {
+    display: none;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.form-error.visible {
+    display: block;
+}
+
+/* --- Spinner de carga en el botón --- */
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: girar 0.7s linear infinite;
+    display: none;
+}
+
+button[type="submit"].cargando .spinner {
+    display: inline-block;
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Pantalla de éxito (reemplaza el formulario dentro del mismo bloque) --- */
+.pantalla-exito {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    animation: apareceExito 0.5s ease both;
+}
+
+.pantalla-exito.visible {
+    display: block;
+}
+
+@keyframes apareceExito {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.icono-exito {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin: 0 auto 26px;
+    box-shadow: var(--shadow-lift);
+}
+
+.pantalla-exito h3 {
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.pantalla-exito p {
+    color: var(--text-muted);
+    max-width: 420px;
+    margin: 0 auto 30px;
+}
+
+/* --- Bloque de contacto por WhatsApp (QR) --- */
+.whatsapp-box {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    border-radius: var(--radius-lg);
+    padding: 45px;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.whatsapp-texto {
+    flex: 1;
+}
+
+.whatsapp-texto .eyebrow {
+    background: rgba(255,255,255,0.14);
+    color: var(--gold-light);
+}
+
+.whatsapp-texto h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.whatsapp-texto p {
+    color: #e9e0ff;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.whatsapp-qr {
+    background: var(--white);
+    padding: 14px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    box-shadow: var(--shadow-lift);
+}
+
+.whatsapp-qr img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .whatsapp-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 34px 26px;
+    }
+}

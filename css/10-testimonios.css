@@ -1,0 +1,67 @@
+/* ============================================================
+   10. TESTIMONIOS
+   ============================================================ */
+
+#testimonios {
+    background: var(--bg-alt);
+    border-radius: var(--radius-lg);
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
+}
+
+.testimonio-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+.testimonio-card .comillas {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.testimonio-card p {
+    color: var(--text-body);
+    font-size: 0.98rem;
+    margin-bottom: 18px;
+}
+
+.testimonio-autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-iniciales {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.testimonio-autor strong {
+    display: block;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.testimonio-autor span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}

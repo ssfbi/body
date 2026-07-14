@@ -1,0 +1,120 @@
+/* ============================================================
+   07. ENTRENAMIENTO CORPORAL (PILARES)
+   ============================================================ */
+
+.pilares-container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.pilar-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    transition: var(--transition);
+}
+
+.pilar-card:hover {
+    box-shadow: var(--shadow-lift);
+}
+
+.pilar-card:nth-child(even) {
+    grid-template-columns: 1fr 1.15fr;
+}
+
+.pilar-card:nth-child(even) .pilar-info {
+    order: 2;
+}
+
+.pilar-info {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pilar-info .eyebrow {
+    align-self: flex-start;
+}
+
+.pilar-info h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.pilar-info > p {
+    color: var(--text-body);
+    margin-bottom: 20px;
+    font-size: 1.02rem;
+}
+
+.pilar-info h4 {
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.pilar-info ul {
+    color: var(--text-body);
+    margin-bottom: 15px;
+}
+
+.pilar-info ul li {
+    margin-bottom: 8px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.pilar-info ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+    font-weight: 700;
+}
+
+.pilar-info .programacion {
+    background: var(--bg-alt);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    font-size: 0.95rem;
+}
+
+.pilar-info .programacion strong {
+    color: var(--primary);
+}
+
+.pilar-media {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 420px;
+}
+
+.pilar-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: #000;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

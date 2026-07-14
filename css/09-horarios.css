@@ -1,0 +1,65 @@
+/* ============================================================
+   09. HORARIOS DE CLASES
+   ============================================================ */
+
+.horarios-tabla {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table.horarios {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+
+table.horarios thead {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+}
+
+table.horarios th {
+    padding: 18px 20px;
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+table.horarios td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--bg-alt);
+    font-size: 0.95rem;
+}
+
+table.horarios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+table.horarios tbody tr:hover {
+    background: var(--bg-alt);
+}
+
+.etiqueta-pilar {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.etiqueta-pilar.cardio { background: rgba(124, 58, 237, 0.12); color: var(--primary-light); }
+.etiqueta-pilar.fuerza { background: rgba(76, 29, 149, 0.12); color: var(--primary); }
+.etiqueta-pilar.yoga   { background: rgba(212, 169, 78, 0.16); color: #a3781f; }
+
+.horarios-nota {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 24px;
+}

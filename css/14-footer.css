@@ -1,0 +1,70 @@
+/* ============================================================
+   14. PIE DE PÁGINA
+   ============================================================ */
+
+footer {
+    background: var(--primary-dark);
+    color: #c4b5fd;
+    padding: 50px 5% 25px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-marca .logo {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.footer-marca p {
+    font-size: 0.9rem;
+    color: #b8a9e0;
+    max-width: 300px;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-mono);
+    margin-bottom: 16px;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #b8a9e0;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold-light);
+}
+
+.footer-inferior {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 22px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9080bd;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
